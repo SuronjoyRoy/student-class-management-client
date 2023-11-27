@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import logo from '../../assets/logo/logo (1).png';
 import { useContext } from "react";
@@ -14,7 +15,7 @@ const Navbar = () => {
     const navOptions = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/allclassess">All Classes</Link></li>
-        <li><Link to="/teachon">Teach on</Link></li>
+        <li><Link to="/teachon">Teach on Coursector</Link></li>
     </>
     return (
         <>
@@ -29,7 +30,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div>
-                        <img className="hidden lg:flex mb-4" src={logo} alt="" />
+                        <img className="hidden lg:flex mb-4 ml-7" src={logo} alt="" />
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -37,14 +38,23 @@ const Navbar = () => {
                         {navOptions}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end mr-5">
+                  
                     {
-                        user ? <>
-                            <div className="flex items-center gap-3">
-                                <span className="mr-2">{user.displayName}</span>
-                                <img className="rounded-full w-[40px]" src={user.photoURL} alt="" />
+                        user?.email ? <>
+                            <div className="dropdown dropdown-end md:mr-5 z-[10]">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-24 rounded-full">
+                                        <img src={user?.photoURL} />
+                                    </div>
+                                </label>
+                                <ul tabIndex={0} className="dropdown-content z-[1] menu menu-sm p-2 shadow bg-[#120a2e] text-white rounded-box w-52 text-center">
+                                <span className="py-1">{user?.displayName}</span>
+                                <span><Link to='/dashboard'>Dashboard</Link></span>
+                                <span><button onClick={handleLogOut} className="btn btn-ghost">Log Out</button></span>
+                                </ul>
                             </div>
-                            <button onClick={handleLogOut} className="btn btn-ghost">Log Out</button>
+
                         </> : <>
                             <Link to="/login">Login</Link>
                         </>
