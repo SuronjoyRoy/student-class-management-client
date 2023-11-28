@@ -15,6 +15,10 @@ import TeacherRequest from "../pages/Dashboard/TeacherRequest/TeacherRequest";
 import AllClass from "../pages/Dashboard/AllClass/AllClass";
 import AllClasses from "../pages/AllClasses/AllClasses";
 import AddClass from "../pages/Dashboard/AddClass/AddClass";
+import MyClass from "../pages/Dashboard/MyClass/MyClass";
+import Update from "../pages/Dashboard/MyClass/Update";
+import Details from "../pages/Dashboard/MyClass/Details";
+import Delete from "../pages/Dashboard/MyClass/Delete";
 
 
 
@@ -81,7 +85,25 @@ export const router = createBrowserRouter([
         {
           path:'addclass',
           element:<AddClass></AddClass>
-        }
+        },
+        {
+          path:'myclass',
+          element:<MyClass></MyClass>
+        },
+        
+        {
+          path:'updateClass/:id',
+          element:<Update></Update>
+        },
+        {
+          path:'detailsClass/:id',
+          element:<Details></Details>
+        },
+        {
+          path:'deleteClass/:id',
+          element:<Delete></Delete>
+        },
+        
       ]
     }
   ]);
