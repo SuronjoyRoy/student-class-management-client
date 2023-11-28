@@ -1,9 +1,28 @@
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
+const ClassCard = ({ item, refetch }) => {
+    const axiosSecure = useAxiosSecure();
+    const { _id, name, title, email, category, Details, photoURL, price } = item;
 
-const ClassCard = ({ item }) => {
-    console.log(item)
-    const {_id, name, title, email, category, Details, photoURL, price } = item;
+    const handleDelete = async () => {
+        axiosSecure.delete(`/class/${_id}`)
+        .then(res =>{
+         console.log(res.data)
+        
+         if (res.data.deletedCount > 0) {
+            Swal.fire(
+              "Deleted!",
+              "Your class has been deleted.",
+              "success"
+            );
+            refetch();
+          }
+        })
+    };
+    
+
     return (
         <div>
             <div >
@@ -46,12 +65,16 @@ const ClassCard = ({ item }) => {
                                 >
                                     See details
                                 </Link>
-                                <Link to='/dashboard/deleteClass/:id'
+                                {/* Delete Button */}
+                                <button onClick={handleDelete} className="bg-[#ed2f42] rounded-lg p-2 text-white">
+                                    Delete
+                                </button>
+                                {/* <Link to='/dashboard/deleteClass/:id'
                                     className="bg-[#ed2f42]  rounded-lg p-2 text-white"
                                 >
                                     Delete
-                                </Link>
-                                
+                                </Link> */}
+
                             </div>
                         </div>
                     </div>

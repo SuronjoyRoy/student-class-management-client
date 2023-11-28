@@ -36,14 +36,8 @@ const axiosPublic = useAxiosPublic();
 
   return (
 
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col">
-        {/* <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Login now!</h1>
-          <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-        </div> */}
-        <div className="card shrink-0 w-full max-w-md shadow-2xl bg-base-100">
-          <form onSubmit={handleSubmit(onSubmit)} className="card-body px-10">
+    <div className='max-w-3xl mx-auto'>
+      <form onSubmit={handleSubmit(onSubmit)} className="card-body px-10">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
@@ -88,11 +82,9 @@ const axiosPublic = useAxiosPublic();
               </select>
             </div>
             <div className="form-control mt-6">
-              <input className="btn btn-primary" type="submit" value="Submit" />
+              <input className="btn bg-[#ff5722]" type="submit" value="Submit" />
             </div>
           </form>
-        </div>
-      </div>
     </div>
 
 

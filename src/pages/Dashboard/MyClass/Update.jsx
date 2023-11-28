@@ -6,7 +6,6 @@ import { useParams } from 'react-router-dom';
 import useUpdateClass from "../../../hooks/useUpdateClass";
 
 const Update = () => {
-    
     const {id} = useParams();
     const [updateClass] = useUpdateClass(id);
 

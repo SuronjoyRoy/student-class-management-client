@@ -1,8 +1,14 @@
+import useClass from "../../../hooks/useClass";
+import ClassCard from "../MyClass/ClassCard";
 
 const AllClass = () => {
+    const [myclass, refetch ]= useClass();
+    // console.log(myclass)
     return (
-        <div>
-            <h2>This is all classes</h2>
+        <div className=" w-auto gap-4 grid md:grid-cols-3 grid-cols-1 ">
+            {
+                myclass.map(item =><ClassCard refetch={refetch} key={item._id} item={item}></ClassCard>)
+            }
         </div>
     );
 };

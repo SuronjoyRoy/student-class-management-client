@@ -6,7 +6,7 @@ const useClass = () => {
     const {user,loading} = useAuth();
     const axiosSecure = useAxiosSecure();
 
-    const {data: info=[]} = useQuery({
+    const {data: info=[],refetch} = useQuery({
         enabled: !loading,
         queryKey:['teacher-class', user && user?.email],
         queryFn: async () =>{
@@ -14,7 +14,7 @@ const useClass = () => {
             return res.data;
         }
     });
-    return [info];
+    return [info,refetch];
 };
 
 export default useClass;

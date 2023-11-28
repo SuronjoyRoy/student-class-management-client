@@ -13,11 +13,7 @@ const Dashboard = () => {
                {rolChecker === 'admin' && (
                 <>
                      <ul className="user p-4 space-y-2">
-                    <li>
-                        <NavLink className='btn btn-block' to="/dashboard/adminHome">
-                            <FaHome></FaHome>
-                            Admin Home</NavLink>
-                    </li>
+                    
                     <li>
                         <NavLink className='btn btn-block' to="/dashboard/teacherRequest">
                             <FaCodeBranch></FaCodeBranch>
