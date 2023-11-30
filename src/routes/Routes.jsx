@@ -17,10 +17,7 @@ import AllClasses from "../pages/AllClasses/AllClasses";
 import AddClass from "../pages/Dashboard/AddClass/AddClass";
 import MyClass from "../pages/Dashboard/MyClass/MyClass";
 import Update from "../pages/Dashboard/MyClass/Update";
-import Details from "../pages/Dashboard/MyClass/Details";
-import Delete from "../pages/Dashboard/MyClass/Delete";
-
-
+import ClassCardDetails from "../pages/AllClasses/ClassCardDetails";
 
 
 export const router = createBrowserRouter([
@@ -38,7 +35,7 @@ export const router = createBrowserRouter([
         },
         {
           path:'teachon',
-          element:<TeachOn></TeachOn>
+          element:<PrivateRoute><TeachOn></TeachOn></PrivateRoute>
         },
         {
           path:'login',
@@ -49,6 +46,10 @@ export const router = createBrowserRouter([
           element:<SignUp></SignUp>
         },
         {
+          path:'all-class/:id',
+          element:<PrivateRoute><ClassCardDetails></ClassCardDetails></PrivateRoute>
+        },
+        {
           path:'secrect',
           element:<PrivateRoute><Secrect></Secrect></PrivateRoute>
         }
@@ -56,7 +57,7 @@ export const router = createBrowserRouter([
     },
     {
       path:'dashboard',
-      element:<Dashboard></Dashboard>,
+      element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
       children:[
         {
           path:'userHome',
@@ -94,14 +95,6 @@ export const router = createBrowserRouter([
         {
           path:'updateClass/:id',
           element:<Update></Update>
-        },
-        {
-          path:'detailsClass/:id',
-          element:<Details></Details>
-        },
-        {
-          path:'deleteClass/:id',
-          element:<Delete></Delete>
         },
         
       ]

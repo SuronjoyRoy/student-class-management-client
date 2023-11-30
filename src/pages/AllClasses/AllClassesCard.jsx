@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 const AllClassesCard = ({item, refetch}) => {
     
     const { _id, name, title, email, category, Details, photoURL, price } = item;
+
     return (
         <div className="card">
-                    <div className="card w-full h-[520px] bg-base-100 shadow-xl">
+                    <div className="card w-full h-[500px] bg-base-100 shadow-xl">
                         <figure className="px-4 pt-4">
                             <img src={photoURL} alt="Language Cover" />
                         </figure>
@@ -33,10 +34,10 @@ const AllClassesCard = ({item, refetch}) => {
                             </p>
                             <div className="w-full justify-center mt-2">
                                 
-                                <Link to='/dashboard/detailsClass/:id'
-                                    className="bg-[#187927]  rounded-lg p-2 text-white"
+                                <Link to={`/all-class/${_id}`}
+                                    className="bg-[#ff5722] rounded-lg  p-2 text-white btn btn-block text-lg btn-ghost hover:bg-purple-800  hover:text-white"
                                 >
-                                    See details
+                                    Enroll Now
                                 </Link>
                                
 

@@ -1,4 +1,4 @@
-import { FaBook, FaHome, FaUsers, FaCodeBranch } from "react-icons/fa";
+import { FaBook, FaHome, FaUsers, FaCodeBranch, FaSearch } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useRoleChecker from "../../hooks/useRoleChecker";
 
@@ -84,6 +84,17 @@ const Dashboard = () => {
                     </>
                 )}
 
+                {/* shared nav links */}
+                <div className="divider"></div>
+                 <>
+                 <ul className="user p-4 space-y-2">
+                    <li>
+                    <NavLink className='btn btn-block' to="/">
+                            <FaHome></FaHome>
+                            Home</NavLink>
+                    </li>
+                 </ul>
+                 </>
             </div>
             {/* dashboard content */}
             <div className="flex-1 p-8">

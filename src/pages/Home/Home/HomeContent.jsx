@@ -2,7 +2,7 @@
 const HomeContent = () => {
     return (
         <div>
-            <div className="flex flex-col-reverse md:flex-row gap-6 py-5 items-center justify-center">
+            <div className="flex flex-col md:flex-row gap-6 py-5 items-center justify-center">
                 <div className="">
                     <figure>
                         <img className="w-[600px] rounded-lg" src="https://i.ibb.co/nsg2cjb/teach123.jpg" alt="" />
