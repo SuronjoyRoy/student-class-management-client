@@ -58,7 +58,7 @@ const Dashboard = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className='btn btn-block' to="/dashboard/">
+                                <NavLink className='btn btn-block' to="/dashboard/userProfile">
                                     <FaUsers></FaUsers>
                                     Profile</NavLink>
                             </li>
@@ -76,7 +76,7 @@ const Dashboard = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className='btn btn-block' to="/dashboard/">
+                            <NavLink className='btn btn-block' to="/dashboard/userProfile">
                                 <FaUsers></FaUsers>
                                 Profile</NavLink>
                         </li>

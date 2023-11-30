@@ -18,6 +18,7 @@ import AddClass from "../pages/Dashboard/AddClass/AddClass";
 import MyClass from "../pages/Dashboard/MyClass/MyClass";
 import Update from "../pages/Dashboard/MyClass/Update";
 import ClassCardDetails from "../pages/AllClasses/ClassCardDetails";
+import UserProfile from "../pages/Dashboard/UserProfile/UserProfile";
 
 
 export const router = createBrowserRouter([
@@ -95,6 +96,10 @@ export const router = createBrowserRouter([
         {
           path:'updateClass/:id',
           element:<Update></Update>
+        },
+        {
+          path:'userprofile',
+          element:<UserProfile></UserProfile>
         },
         
       ]

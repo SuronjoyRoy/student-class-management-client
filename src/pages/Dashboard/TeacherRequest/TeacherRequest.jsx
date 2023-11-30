@@ -47,7 +47,7 @@ const TeacherRequest = () => {
 
         console.log(apporve)
 
-        const teacherApprove = await fetch(`http://localhost:5000/apporove-single/${apporve.email}`, {
+        const teacherApprove = await fetch(`https://student-class-management-server-ten.vercel.app/apporove-single/${apporve.email}`, {
 
             method: 'PATCH',
             headers: {
