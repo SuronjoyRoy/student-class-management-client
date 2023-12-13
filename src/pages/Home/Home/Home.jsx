@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import Banner from "../Banner/Banner";
 import HomeContent from "./HomeContent";
 import ServiceContent from "./ServiceContent";
+import Aboutus from "./Aboutus";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <HomeContent></HomeContent>
             <ServiceContent></ServiceContent>
+            <Aboutus></Aboutus>
         </div>
     );
 };
