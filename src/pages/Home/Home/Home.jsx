@@ -3,6 +3,7 @@ import Banner from "../Banner/Banner";
 import HomeContent from "./HomeContent";
 import ServiceContent from "./ServiceContent";
 import Aboutus from "./Aboutus";
+import Accordion from "./Accordion";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <HomeContent></HomeContent>
             <ServiceContent></ServiceContent>
             <Aboutus></Aboutus>
+            <Accordion></Accordion>
         </div>
     );
 };
