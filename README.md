@@ -1,8 +1,7 @@
-# React + Vite
+User Authentication and Authorization:
+Implement a robust user authentication system to secure the website, allowing students, teachers, and administrators to log in securely.
+Set up role-based access control to define specific permissions for different user roles, such as students, teachers, and administrators, ensuring appropriate access levels.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live link: https://student-class-management-cbae1.web.app/
+client site repository: https://github.com/SuronjoyRoy/student-class-management-client
+Server site repository: https://github.com/SuronjoyRoy/student-class-management-server
